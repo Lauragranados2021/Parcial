@@ -1,5 +1,6 @@
 package com.Parcial.Parcial.services;
 
+import com.Parcial.Parcial.model.Docente;
 import com.Parcial.Parcial.model.Empresa;
 import com.Parcial.Parcial.model.Practica;
 import com.Parcial.Parcial.repositories.PracticaRepository;
@@ -15,8 +16,12 @@ public class PracticaService {
     public List<Practica> getAllPracticas(){
         return practicaRepository.findAll();
     }
-    public Practica save(Practica practica, Empresa empresa){
+    public Practica save(Practica practica, Empresa empresa, Docente docente){
+        practica.setDocente(docente);
         practica.setEmpresa(empresa);
         return practicaRepository.save(practica);
+    }
+    public Practica findById(Integer id){
+        return practicaRepository.findById(id).orElse(null);
     }
 }

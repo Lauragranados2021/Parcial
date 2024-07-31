@@ -23,7 +23,12 @@ public class Practica implements Serializable {
     @OneToMany(mappedBy = "practica",cascade = CascadeType.REMOVE)
     @JsonIgnore
     public List<Estudiante> estudiantes;
-
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    public Docente docente;
+    @OneToMany(mappedBy = "practica",cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    public List<curso> cursos;
 
 
     public Practica() {
@@ -39,6 +44,33 @@ public class Practica implements Serializable {
 
     public String getDestino() {
         return destino;
+    }
+
+    public List<Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
+
+    public Practica setEstudiantes(List<Estudiante> estudiantes) {
+        this.estudiantes = estudiantes;
+        return this;
+    }
+
+    public Docente getDocente() {
+        return docente;
+    }
+
+    public Practica setDocente(Docente docente) {
+        this.docente = docente;
+        return this;
+    }
+
+    public List<curso> getCursos() {
+        return cursos;
+    }
+
+    public Practica setCursos(List<curso> cursos) {
+        this.cursos = cursos;
+        return this;
     }
 
     public void setDestino(String destino) {
