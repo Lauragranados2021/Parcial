@@ -1,8 +1,10 @@
 package com.Parcial.Parcial.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Practica implements Serializable {
@@ -18,6 +20,10 @@ public class Practica implements Serializable {
     @ManyToOne
     @JoinColumn(nullable = false)
     public Empresa empresa;
+    @OneToMany(mappedBy = "practica",cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    public List<Estudiante> estudiantes;
+
 
 
     public Practica() {

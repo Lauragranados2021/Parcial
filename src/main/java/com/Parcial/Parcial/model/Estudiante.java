@@ -1,4 +1,5 @@
 package com.Parcial.Parcial.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -13,6 +14,9 @@ public class Estudiante implements Serializable {
     public String nombre;
 @Column(nullable = false,name="apellido")
     public String apellido;
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    Practica practica;
 
     public Estudiante() {
     }
@@ -39,5 +43,13 @@ public class Estudiante implements Serializable {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public Practica getPractica() {
+        return practica;
+    }
+
+    public void setPractica(Practica practica) {
+        this.practica = practica;
     }
 }
