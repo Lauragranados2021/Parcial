@@ -18,7 +18,10 @@ Este proyecto es una aplicación de gestión de prácticas académicas desarroll
 4. Abre un navegador y accede a la siguiente URL:
    ```
     http://localhost:8080/swagger-ui/index.html#/
+
     ```
+5. Recuerda que la rama principal de este repo es master y por tanto el desarrollo se encuentra ahi 
+## Como funciona     
 
 5.1 Orden para la creacion de Entidades 
 5.1.1 Para Crear una Practica usted Primero deber crear una empresa y un Docente 
