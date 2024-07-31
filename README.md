@@ -31,7 +31,7 @@ Orden para la creacion de Entidades
 1. 1.1 Para la creacion de una practica los valores de inicio y fin se llenaran de esta manera "inicio": "2024-07-31T06:31:03.605Z",
    "fin": "2024-07-31T06:31:03.605Z",
 2. 1.2 Cuando usted haga una busqueda por periodo de tiempo debe enviar datos debe hacerlo con el siguiente formato :2024-07-31T05:41:20.743+00:00 lo mismo para el campo endDate
-3. Dentro de este repositorio encontraras un archivo denominado diagrama de clases.png donde podras entender la logica de nuestro repositorio 
+3. Dentro de este repositorio encontraras un archivo denominado DiagramasClases.png donde podras entender la logica de nuestro repositorio 
 
 
 ## Trabajo Realizado Por Laura Nicol Granados Y Tatiana Lesmes 
