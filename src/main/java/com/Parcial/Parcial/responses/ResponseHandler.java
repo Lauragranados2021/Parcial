@@ -6,12 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ResponseHandler {
-    public static ResponseEntity<Object> generateResponse(String message, HttpStatus status, Object data) {
-        Map<String ,Object> map = new HashMap<>();
-        map.put("message", message);
+    static public ResponseEntity<Object> generateResponse(String message, HttpStatus status, Object responseObject){
+        Map<String,Object> map = new HashMap<>();
+        map.put("massagge",message);
         map.put("status",status);
-        map.put("data", data);
+        map.put("data",responseObject);
+
         return new ResponseEntity<Object>(map,status);
     }
-
 }
