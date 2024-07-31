@@ -23,10 +23,10 @@ Este proyecto es una aplicación de gestión de prácticas académicas desarroll
 5. Recuerda que la rama principal de este repo es master y por tanto el desarrollo se encuentra ahi 
 ## Como funciona     
 
-5.1 Orden para la creacion de Entidades 
-5.1.1 Para Crear una Practica usted Primero deber crear una empresa y un Docente 
-5.1.2 Caundo cree estos dos registos use las llaves primarias para colocar las dentro de la practica 
-5.1.3 Para crear un estudiante primero debe crear una practica y asignarla al estudiante
+Orden para la creacion de Entidades 
+1. Para Crear una Practica usted Primero deber crear una empresa y un Docente 
+2. Caundo cree estos dos registos use las llaves primarias para colocar las dentro de la practica 
+3. Para crear un estudiante primero debe crear una practica y asignarla al estudiante
 ### A TENER EN CUENTA 
 1. 1.1 Para la creacion de una practica los valores de inicio y fin se llenaran de esta manera "inicio": "2024-07-31T06:31:03.605Z",
    "fin": "2024-07-31T06:31:03.605Z",
