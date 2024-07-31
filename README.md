@@ -28,3 +28,6 @@ Este proyecto es una aplicación de gestión de prácticas académicas desarroll
 1. 1.1 Para la creacion de una practica los valores de inicio y fin se llenaran de esta maner "inicio": "2024-07-31T06:31:03.605Z",
    "fin": "2024-07-31T06:31:03.605Z",
 2. 1.2 Cuando usted haga una busqueda por periodo de tiempo debe enviar datos con el siguiente formato :2024-07-31T05:41:20.743+00:00 lo mismo para el campo endDate
+
+
+## Trabajo Realizado Por Laura Nicol Granados Y Tatiana Lesmes 
