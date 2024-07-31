@@ -33,4 +33,9 @@ public class EstudianteController {
         Estudiante response = estudianteService.save(estudiante,practica);
         return ResponseHandler.generateResponse("Estudiante guardado", HttpStatus.CREATED,response);
     }
+    @GetMapping("/practica/{idPractica}")
+    public ResponseEntity<Object> findByPracticaId(@PathVariable Integer idPractica){
+        List<Estudiante> estudiante= estudianteService.findByPracticaId(idPractica);
+        return ResponseHandler.generateResponse("Listado de estudiantes por practica", HttpStatus.FOUND,estudiante);
+    }
 }

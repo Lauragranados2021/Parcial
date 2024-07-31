@@ -24,4 +24,7 @@ public class EstudianteService {
     public Estudiante findById(Integer id){
         return estudianteRepository.findById(id).orElse(null);
     }
+    public List<Estudiante> findByPracticaId(Integer practicaId){
+        return estudianteRepository.findByPracticaId(practicaId);
+    }
 }
