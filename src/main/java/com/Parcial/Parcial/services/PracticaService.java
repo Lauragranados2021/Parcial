@@ -7,6 +7,7 @@ import com.Parcial.Parcial.repositories.PracticaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 @Service
 public class PracticaService {
@@ -26,5 +27,8 @@ public class PracticaService {
     }
     public List<Practica> findPracticasByDocenteId(String id){
         return practicaRepository.findPracticasByDocenteNumIdentificacion(id);
+    }
+    public List<Practica> findPracticasByDateRange(Date startDate, Date endDate){
+        return practicaRepository.findPracticasByDateRange(startDate, endDate);
     }
 }

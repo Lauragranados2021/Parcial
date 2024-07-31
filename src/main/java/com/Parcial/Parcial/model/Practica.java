@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -13,10 +14,10 @@ public class Practica implements Serializable {
     public Integer id;
     @Column(nullable = false,name="destino")
     public String destino;
-    @Column(nullable = false,name="fecha")
-    public String fecha;
-    @Column(nullable = false,name="periodo")
-    public String periodo;
+    @Column(nullable = false,name="inicio")
+    public Date inicio;
+    @Column(nullable = false,name="fin")
+    public Date fin;
     @ManyToOne
     @JoinColumn(nullable = false)
     public Empresa empresa;
@@ -55,6 +56,24 @@ public class Practica implements Serializable {
         return this;
     }
 
+    public Date getInicio() {
+        return inicio;
+    }
+
+    public Practica setInicio(Date inicio) {
+        this.inicio = inicio;
+        return this;
+    }
+
+    public Date getFin() {
+        return fin;
+    }
+
+    public Practica setFin(Date fin) {
+        this.fin = fin;
+        return this;
+    }
+
     public Docente getDocente() {
         return docente;
     }
@@ -77,22 +96,7 @@ public class Practica implements Serializable {
         this.destino = destino;
     }
 
-    public String getFecha() {
-        return fecha;
-    }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-
-    public String getPeriodo() {
-        return periodo;
-    }
-
-    public Practica setPeriodo(String periodo) {
-        this.periodo = periodo;
-        return this;
-    }
 
     public Empresa getEmpresa() {
         return empresa;
