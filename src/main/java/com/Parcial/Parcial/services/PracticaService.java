@@ -24,4 +24,7 @@ public class PracticaService {
     public Practica findById(Integer id){
         return practicaRepository.findById(id).orElse(null);
     }
+    public List<Practica> findPracticasByDocenteId(String id){
+        return practicaRepository.findPracticasByDocenteNumIdentificacion(id);
+    }
 }

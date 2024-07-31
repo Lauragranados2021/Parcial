@@ -15,8 +15,8 @@ public class Practica implements Serializable {
     public String destino;
     @Column(nullable = false,name="fecha")
     public String fecha;
-    @Column(nullable = false,name="Periodo")
-    public String Periodo;
+    @Column(nullable = false,name="periodo")
+    public String periodo;
     @ManyToOne
     @JoinColumn(nullable = false)
     public Empresa empresa;
@@ -86,11 +86,12 @@ public class Practica implements Serializable {
     }
 
     public String getPeriodo() {
-        return Periodo;
+        return periodo;
     }
 
-    public void setPeriodo(String periodo) {
-        Periodo = periodo;
+    public Practica setPeriodo(String periodo) {
+        this.periodo = periodo;
+        return this;
     }
 
     public Empresa getEmpresa() {

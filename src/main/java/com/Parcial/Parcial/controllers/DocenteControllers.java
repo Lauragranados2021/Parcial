@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/docente")
 public class DocenteControllers {
     @Autowired
     DocenteService docenteService;
@@ -25,6 +25,11 @@ public class DocenteControllers {
     public ResponseEntity<Object> save(@RequestBody Docente docente){
         Docente response = docenteService.save(docente);
         return ResponseHandler.generateResponse("Docente guardado", HttpStatus.CREATED, response);
+    }
+    @GetMapping("/{idDocente}")
+    public ResponseEntity<Object> findById(@PathVariable Integer idDocente){
+        Docente response = docenteService.findById(idDocente);
+        return ResponseHandler.generateResponse("Docente encontrado", HttpStatus.FOUND, response);
     }
 
 }

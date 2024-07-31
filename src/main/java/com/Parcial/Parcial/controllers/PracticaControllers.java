@@ -36,4 +36,9 @@ Docente docente=docenteService.findById(idDocente);
         Practica practice=practicaService.save(practica,empresa,docente);
         return ResponseHandler.generateResponse("Practica guardada", HttpStatus.CREATED, practice);
     }
+    @GetMapping("/docente/{idDocente}")
+  public ResponseEntity<Object> findPracticasByDocenteId(@PathVariable String idDocente){
+        List<Practica> response = practicaService.findPracticasByDocenteId(idDocente);
+        return ResponseHandler.generateResponse("Listado de practicas por docente", HttpStatus.FOUND, response);
+    }
 }
